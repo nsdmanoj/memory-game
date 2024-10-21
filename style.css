@@ -1,0 +1,100 @@
+/* General styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 6vw; /* Scales with the viewport width */
+  color: #4CAF50;
+  text-shadow: 2px 2px #A9A9A9;
+  animation: color-change 5s infinite;
+}
+
+p {
+  font-size: 3.5vw; /* Scales with the viewport width */
+  color: #555;
+}
+
+@keyframes color-change {
+  0% { color: #4CAF50; }
+  25% { color: #ff6347; }
+  50% { color: #1E90FF; }
+  75% { color: #FFD700; }
+  100% { color: #4CAF50; }
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 4vw; /* Responsive scaling */
+  color: #333;
+}
+
+/* Grid styling */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw; /* Responsive width */
+  max-width: 500px; /* Cap the max width */
+  margin: 0 auto;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Card styling */
+.grid img {
+  width: 18vw; /* Relative width based on viewport */
+  height: 18vw; /* Keep it square */
+  max-width: 100px; /* Ensure it doesn’t get too large */
+  max-height: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Result text styling */
+#result {
+  font-weight: bold;
+  font-size: 4vw; /* Responsive scaling */
+  color: #ff6347;
+}
+
+#result:after {
+  content: ' Points';
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1vw; /* Responsive font size */
+  color: #333;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .grid img {
+    width: 22vw;
+    height: 22vw;
+  }
+}
